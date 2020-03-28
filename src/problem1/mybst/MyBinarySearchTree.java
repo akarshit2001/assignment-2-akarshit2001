@@ -6,9 +6,13 @@
  */
 package problem1.mybst;
 // to implement BinarySearchTree
+
 import problem1.node.TreeNode;
+
 public class MyBinarySearchTree {
-    public TreeNode root = null;
+    private TreeNode root = null;
+    private int max = 0;
+    private int count = 0;
 
     public TreeNode getRoot() {
         return root;
@@ -36,6 +40,7 @@ public class MyBinarySearchTree {
             }
         }
     }
+
     public void traversePreorder(TreeNode ni) {
         if (ni == null) {
             System.out.print("");
@@ -47,6 +52,7 @@ public class MyBinarySearchTree {
 
         }
     }
+
     public void traversePostorder(TreeNode ni) {
         if (ni == null) {
             System.out.print("");
@@ -60,9 +66,31 @@ public class MyBinarySearchTree {
         }
 
     }
-    public void print(TreeNode k){
-       print(k.getLeft());
-        System.out.println(k.getData());
+
+    public void traverse(TreeNode k) {
+
+
+        leftnode(k, 1);
+
+    }
+
+    public void leftnode(TreeNode node, int level) {
+        if (node == null) {
+            return;
+        }
+        if (max < level) {
+            System.out.print(node.getData() + " ");
+            max = level;
+
+        }
+
+        if (node.getLeft() == null) {
+            count++;
+            max = max + 1;
+        }
+        leftnode(node.getLeft(), level + 1);
+        leftnode(node.getRight(), level + 1);
+
 
     }
 }
