@@ -7,4 +7,41 @@
 package problem3.node;
 
 public class Node {
+    public String data;
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
+    public Node next = null;
+    public int priority;
+
+    public Node(String data,  int priority) {
+        this.data = data;
+        this.priority = priority;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public Node(String data) {
+        this.data = data;
+    }
 }
