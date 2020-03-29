@@ -6,9 +6,7 @@
  */
 package problem2.main;
 // executable class
-
-import problem1.mybst.MyBinarySearchTree;
-
+import problem2.bst1.MyBinarySearchTree;
 public class MyMain {
     public static void main(String[] args) {
         MyBinarySearchTree bin = new MyBinarySearchTree();
