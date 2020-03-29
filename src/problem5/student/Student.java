@@ -29,6 +29,11 @@ public class Student {
         return backlog;
     }
 
+    @Override
+    public String toString() {
+        return getName() + " " + getBacklog() + " " + getApperingCount();
+    }
+
     public void setBacklog(int backlog) {
         this.backlog = backlog;
     }
