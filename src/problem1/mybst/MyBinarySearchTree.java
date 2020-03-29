@@ -71,6 +71,7 @@ public class MyBinarySearchTree {
 
 
         leftnode(k, 1);
+        System.out.println("\n" + "No of node that not have left child" + " " + count);
 
     }
 
@@ -86,7 +87,7 @@ public class MyBinarySearchTree {
 
         if (node.getLeft() == null) {
             count++;
-            max = max + 1;
+
         }
         leftnode(node.getLeft(), level + 1);
         leftnode(node.getRight(), level + 1);
@@ -94,6 +95,5 @@ public class MyBinarySearchTree {
 
     }
 }
-
 
 
