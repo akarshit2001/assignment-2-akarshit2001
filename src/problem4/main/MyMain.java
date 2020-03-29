@@ -8,7 +8,7 @@ package problem4.main;
 // executable class
 // use problem1.mybst.MyBinarySearchTree class for creating binary tree
 
-import problem1.mybst.MyBinarySearchTree;
+import problem2.bst1.MyBinarySearchTree;
 import problem4.myqueue.MyQueue;
 
 import java.util.Scanner;
@@ -31,6 +31,6 @@ public class MyMain {
         System.out.println("Now preorder sucessor of all node are as below");
         binarySearchTree.preOrder(binarySearchTree.getRoot());
         myQueue.display();
+
     }
 }
-
