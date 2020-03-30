@@ -11,7 +11,7 @@ import problem1.node.TreeNode;
 
 public class MyBinarySearchTree {
     private TreeNode root = null;
-    private int max = 0;
+    private int max = 1;
     private int count = 0;
 
     public TreeNode getRoot() {
@@ -71,6 +71,7 @@ public class MyBinarySearchTree {
 
 
         leftnode(k, 1);
+
         System.out.println("\n" + "No of node that not have left child" + " " + count);
 
     }
