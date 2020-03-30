@@ -7,14 +7,18 @@
 package problem5.student;
 // to store student information and properties
 public class Student {
-    private String Name;
-    private int backlog;
-    private int apperingCount;
 
-    public Student(String name, int backlog, int apperingCount) {
-        Name = name;
-        this.backlog = backlog;
-        this.apperingCount = apperingCount;
+    private String Name;
+    private int RollNo;
+    private int backlog;
+    private String Course;
+
+    public String getCourse() {
+        return Course;
+    }
+
+    public void setCourse(String course) {
+        Course = course;
     }
 
     public String getName() {
@@ -25,24 +29,19 @@ public class Student {
         Name = name;
     }
 
+    public int getRollNo() {
+        return RollNo;
+    }
+
+    public void setRollNo(int rollNo) {
+        RollNo = rollNo;
+    }
+
     public int getBacklog() {
         return backlog;
     }
 
-    @Override
-    public String toString() {
-        return getName() + " " + getBacklog() + " " + getApperingCount();
-    }
-
     public void setBacklog(int backlog) {
         this.backlog = backlog;
-    }
-
-    public int getApperingCount() {
-        return apperingCount;
-    }
-
-    public void setApperingCount(int apperingCount) {
-        this.apperingCount = apperingCount;
     }
 }
