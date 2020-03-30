@@ -6,5 +6,10 @@
  */
 package problem5.circularqueue;
 //to implement circular queue
+
 public class MyCircularQueue {
+    private int size;
+    private int font;
+    private int rear;
+    private int maxsize;
 }
