@@ -18,8 +18,9 @@ public class MyBinarySearchTree {
         return root;
     }
 
-    public void insert(int item) {
-        TreeNode node = new TreeNode(item);
+    public void insert(int data) {
+        TreeNode node = new TreeNode(data);
+
         if (root == null) {
             root = node;
         } else {
@@ -27,20 +28,19 @@ public class MyBinarySearchTree {
             TreeNode parent = null;
             while (temp != null) {
                 parent = temp;
-                if (item < temp.getData()) {
+                if (node.getData() <= temp.getData()) {
                     temp = temp.getLeft();
-                } else if (item >= temp.getData()) {
+                } else {
                     temp = temp.getRight();
                 }
             }
-            if (item <= parent.getData()) {
+            if (node.getData() <= parent.getData()) {
                 parent.setLeft(node);
             } else {
                 parent.setRight(node);
             }
         }
     }
-
     public void traversePreorder(TreeNode ni) {
         if (ni == null) {
             System.out.print("");
@@ -81,12 +81,14 @@ public class MyBinarySearchTree {
         }
         if (max < level) {
             System.out.print(node.getData() + " ");
-            max = level;
+
 
         }
+        max = level;
 
         if (node.getLeft() == null) {
             count++;
+            max++;
 
         }
         leftnode(node.getLeft(), level + 1);
