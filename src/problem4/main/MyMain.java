@@ -18,7 +18,7 @@ public class MyMain {
         MyQueue myQueue = new MyQueue();
         Scanner sc = new Scanner(System.in);
         MyBinarySearchTree binarySearchTree = new MyBinarySearchTree();
-        System.out.println("Enter the length of number that you want to insert.");
+        System.out.println("How many no. you want to insert?");
         int length = sc.nextInt();
         for (int i = 0; i < length; i++) {
             int m = sc.nextInt();
