@@ -20,7 +20,7 @@ public class MyMain {
         System.out.println("\n");
         System.out.println("Traverse postorder");
         bin.traversePostorder(bin.getRoot());
-
+//Output shows the proof of first and second part of question.
     }
 
 }
